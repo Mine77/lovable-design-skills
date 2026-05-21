@@ -30,6 +30,26 @@ It is useful for landing pages, marketing sites, portfolios, dashboards, product
 > [!NOTE]
 > This is an unofficial skill inspired by Lovable-style frontend generation workflows. It is not affiliated with, endorsed by, or maintained by Lovable.
 
+## Quick start
+
+### Install the skill
+
+```sh
+npx skills add Mine77/lovable-design-skills
+```
+
+### Ask your agent to use it
+
+```text
+Use the lovable-design-system skill to redesign this landing page.
+```
+
+or:
+
+```text
+Use the lovable-design-system skill. Pick a bold visual direction and rebuild this dashboard so it does not look like a generic AI SaaS page.
+```
+
 ## Showcase
 
 The examples below are real HTML pages included in this repository and captured with Playwright. They demonstrate the range of visual directions this skill can guide an agent toward.
@@ -52,26 +72,6 @@ The examples below are real HTML pages included in this repository and captured 
 - **Redesign workflow** — generate and compare multiple rendered design directions
 - **Style persistence** — save selected visual choices into `styleguide.md`
 - **Implementation constraints** — semantic tokens, Tailwind/CSS variables, contrast, SEO defaults
-
-## Quick start
-
-### Install the skill
-
-```sh
-npx skills add Mine77/lovable-design-skills
-```
-
-### Ask your agent to use it
-
-```text
-Use the lovable-design-system skill to redesign this landing page.
-```
-
-or:
-
-```text
-Use the lovable-design-system skill. Pick a bold visual direction and rebuild this dashboard so it does not look like a generic AI SaaS page.
-```
 
 ## Repository structure
 

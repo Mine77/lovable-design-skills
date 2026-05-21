@@ -30,6 +30,28 @@
 > [!NOTE]
 > 这是一个受 Lovable 风格前端生成工作流启发的非官方技能，不隶属于 Lovable，也未获得 Lovable 的认可或维护。
 
+## 快速开始
+
+### 安装技能
+
+```sh
+npx skills add Mine77/lovable-design-skills
+```
+
+### 使用技能
+
+安装后，在设计界面时让 Agent 使用这个 Skill：
+
+```text
+使用 lovable-design-system 技能重设计这个落地页。
+```
+
+也可以这样写：
+
+```text
+使用 lovable-design-system 技能。选择一个大胆的视觉方向，重做这个 dashboard，让它不要看起来像普通 AI SaaS 页面。
+```
+
 ## Showcase
 
 下面 6 张图来自仓库里的真实 HTML 页面，并通过 Playwright 截图生成。它们不是 AI 生成的 mockup，而是这个 Skill 可以指导 Agent 落地的不同视觉方向示例。
@@ -54,28 +76,6 @@
 - **重设计流程**：生成并比较多个设计方向
 - **风格固化**：把用户选择写入 `styleguide.md`
 - **实现约束**：语义化 token、Tailwind / CSS 变量、对比度、基础 SEO 默认规则
-
-## 快速开始
-
-### 安装技能
-
-```sh
-npx skills add Mine77/lovable-design-skills
-```
-
-### 使用技能
-
-安装后，在设计界面时让 Agent 使用这个 Skill：
-
-```text
-使用 lovable-design-system 技能重设计这个落地页。
-```
-
-也可以这样写：
-
-```text
-使用 lovable-design-system 技能。选择一个大胆的视觉方向，重做这个 dashboard，让它不要看起来像普通 AI SaaS 页面。
-```
 
 ## 仓库结构
 
