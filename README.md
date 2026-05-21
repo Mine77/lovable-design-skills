@@ -8,6 +8,9 @@
 
 这个仓库把 Lovable 风格前端生成背后的设计指导整理成一个可复用的 Agent Skill。它封装了提示词层面的设计哲学、精选的配色 / 字体 / 布局预设、帮助 Agent 避免通用 AI 味道的交互流程，以及把用户审美选择固化到本地 `styleguide.md` 的工作方式。
 
+> [!NOTE]
+> 这是一个非官方技能，不隶属于 Lovable，也未获得 Lovable 的认可或维护。
+
 ## Showcase
 
 下面 6 张图来自仓库里的真实 HTML 页面，并通过 Playwright 截图生成。它们不是 AI 生成的 mockup，而是这个 Skill 可以指导 Agent 落地的不同 layout 和视觉方向示例。
@@ -19,9 +22,6 @@
 | ![Paper & Ink 作品集 Gallery 布局](assets/readme/paper-ink-portfolio.png) | ![Terracotta & Sage 健康品牌 Split Screen 布局](assets/readme/terracotta-sage-wellness.png) |
 | Brutalist Pop / 活动 Schedule | Ocean Deep / Enterprise Dashboard |
 | ![Brutalist Pop 活动 Schedule 布局](assets/readme/brutalist-pop-event.png) | ![Ocean Deep Enterprise Dashboard 布局](assets/readme/ocean-deep-enterprise.png) |
-
-> [!NOTE]
-> 这是一个非官方技能，不隶属于 Lovable，也未获得 Lovable 的认可或维护。
 
 ## 它能做什么
 
