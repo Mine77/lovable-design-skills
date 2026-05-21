@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terracotta & Sage Wellness</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Sans:wght@400;500;600&display=swap");
+    :root { --clay: #c4654a; --peach: #e8a87c; --sage: #87a878; --forest: #4a6741; --cream: #fbf2e5; --ink: #2e241f; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: linear-gradient(120deg, #fbf2e5, #efd6bf 54%, #dba77a); color: var(--ink); font-family: "Fira Sans", sans-serif; overflow: hidden; }
+    .page { height: 100vh; padding: 40px 56px; position: relative; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(.2px); opacity: .95; }
+    .orb.one { width: 520px; height: 520px; right: -120px; top: 80px; background: radial-gradient(circle at 35% 35%, #fff5df, var(--peach) 44%, var(--clay)); }
+    .orb.two { width: 280px; height: 280px; left: 48%; bottom: -110px; background: radial-gradient(circle, #cfe0bd, var(--sage)); }
+    nav { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; font-size: 13px; text-transform: uppercase; letter-spacing: .14em; font-weight: 600; }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .leaf { width: 34px; height: 34px; background: var(--forest); border-radius: 70% 10% 70% 10%; transform: rotate(-18deg); }
+    .links { display: flex; gap: 34px; }
+    .book { border: 1px solid var(--forest); border-radius: 999px; padding: 13px 22px; }
+    .hero { position: relative; z-index: 2; display: grid; grid-template-columns: .92fr 1.08fr; gap: 54px; height: calc(100vh - 110px); align-items: center; }
+    .left { max-width: 660px; }
+    .kicker { color: var(--forest); font-weight: 600; text-transform: uppercase; letter-spacing: .18em; margin-bottom: 22px; }
+    h1 { font-family: "DM Serif Display", serif; font-size: clamp(74px, 8.4vw, 138px); line-height: .9; margin: 0; letter-spacing: 0; font-weight: 400; }
+    p { font-size: 20px; line-height: 1.65; max-width: 520px; margin: 28px 0 36px; color: #59483d; }
+    .actions { display: flex; gap: 18px; align-items: center; }
+    .primary { background: var(--forest); color: var(--cream); border-radius: 999px; padding: 18px 28px; font-weight: 600; box-shadow: 0 22px 44px rgba(74,103,65,.24); }
+    .secondary { color: var(--forest); font-weight: 600; }
+    .visual { height: 680px; position: relative; }
+    .arch { position: absolute; right: 12%; top: 4%; width: 430px; height: 590px; border-radius: 230px 230px 36px 36px; background: linear-gradient(160deg, rgba(255,255,255,.48), rgba(255,255,255,.08)), var(--sage); box-shadow: 0 35px 80px rgba(96,72,50,.24); overflow: hidden; }
+    .arch::before { content: ""; position: absolute; width: 310px; height: 310px; border-radius: 50%; background: var(--clay); left: -80px; bottom: 60px; }
+    .arch::after { content: ""; position: absolute; width: 210px; height: 300px; border-radius: 110px 110px 20px 20px; background: var(--cream); right: 48px; top: 120px; box-shadow: inset 0 -90px 0 rgba(232,168,124,.55); }
+    .floating { position: absolute; width: 270px; left: 4%; bottom: 72px; background: rgba(255,250,241,.78); border: 1px solid rgba(74,103,65,.2); border-radius: 26px; padding: 24px; backdrop-filter: blur(14px); box-shadow: 0 26px 58px rgba(96,72,50,.18); }
+    .floating h3 { margin: 0 0 18px; font-family: "DM Serif Display"; font-size: 30px; font-weight: 400; }
+    .steps { display: grid; gap: 10px; }
+    .steps span { display: block; height: 38px; border-radius: 999px; background: linear-gradient(90deg, rgba(135,168,120,.32), rgba(232,168,124,.25)); }
+    .stats { position: absolute; right: 0; bottom: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 560px; }
+    .stat { background: rgba(74,103,65,.9); color: var(--cream); border-radius: 22px; padding: 20px; min-height: 116px; }
+    .stat strong { display: block; font-family: "DM Serif Display"; font-size: 42px; font-weight: 400; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="orb one"></div><div class="orb two"></div>
+    <nav><div class="brand"><div class="leaf"></div><span>Root & Ritual</span></div><div class="links"><span>Programs</span><span>Retreats</span><span>Journal</span></div><div class="book">Book a visit</div></nav>
+    <section class="hero">
+      <div class="left"><div class="kicker">Seasonal wellness studio</div><h1>Slow care for fast lives.</h1><p>Grounded rituals, plant-forward guidance, and quiet spaces designed to bring your nervous system back into rhythm.</p><div class="actions"><div class="primary">Begin your ritual</div><div class="secondary">Explore programs -></div></div></div>
+      <div class="visual"><div class="arch"></div><div class="floating"><h3>Today's rhythm</h3><div class="steps"><span></span><span></span><span></span></div></div><div class="stats"><div class="stat"><strong>12</strong>studios</div><div class="stat"><strong>84%</strong>less stress</div><div class="stat"><strong>4.9</strong>member rating</div></div></div>
+    </section>
+  </main>
+</body>
+</html>

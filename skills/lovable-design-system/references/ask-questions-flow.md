@@ -4,6 +4,10 @@ When a user's request is visual but the direction is unclear, let them
 steer the look and feel before you build. The mechanism is a single round
 of **three visual_choice questions**: palette, typography, layout.
 
+If the runtime supports image generation, also generate visual previews for
+the offered directions so the user can judge by sight, not only by names,
+swatches, type samples, and wireframes.
+
 This file is the contract. Follow it exactly.
 
 ---
@@ -68,6 +72,56 @@ will this site have?") if you genuinely need it — never a style question.
 
 ---
 
+## Optional image previews
+
+Use this section only when the current agent environment has image-generation
+capability. If it does not, the normal visual_choice UI is enough.
+
+### What to generate
+
+Generate a compact preview board or 3-4 separate UI mockup images that map to
+the candidate presets. The previews should be fast decision aids, not final
+designs.
+
+Each preview should combine:
+
+- one palette option from `palette-presets.md`
+- one compatible typography option from `font-pairs.md`
+- one compatible layout option from `layout-archetypes.md`
+
+Prefer combinations that make the choices easier to compare. Example for a
+marketing landing page:
+
+- `Noir & Gold` + `Cormorant Garamond / Karla` + `broken-grid`
+- `Neon Mint` + `Space Grotesk / DM Sans` + `bento-grid`
+- `Paper & Ink` + `Instrument Serif / Work Sans` + `magazine`
+- `Ocean Deep` + `Sora / Manrope` + `hero-grid`
+
+### Prompting rules
+
+- Render polished web UI mockups, not mood boards.
+- Use abstract interface copy blocks or very short generic labels; do not rely
+  on generated text being legible.
+- Make the previews visually distinct in palette, type scale, density,
+  spacing, and composition.
+- Keep the project domain visible in the mockup structure when possible.
+- Do not include brand names, logos, or copyrighted product marks unless the
+  user provided them.
+- If generating a single board, label choices outside the image in your
+  message instead of relying on text inside the image.
+
+### How to present
+
+Show the generated previews together with the three visual_choice questions.
+The user still chooses palette, typography, and layout as structured answers;
+the images are supporting evidence.
+
+If the user points at a preview instead of answering the structured questions,
+map that preview back to its palette / typography / layout combination and
+confirm the inferred picks before building.
+
+---
+
 ## After the user answers
 
 Translate the picks into a detailed creative brief — specific fonts, hex
@@ -83,7 +137,9 @@ colors, animation approaches, layout decisions. Infer the rest:
 - Visual weight: from font weights, line-height, and the palette's
   contrast range.
 
-The brief should be Awwwards-level specific. Then build.
+The brief should be Awwwards-level specific. Then persist the selected
+direction into `styleguide.md` when possible, following
+`styleguide-persistence.md`. Then build.
 
 ---
 

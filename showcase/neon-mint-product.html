@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neon Mint Product</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap");
+    :root { --bg: #0d1b2a; --panel: #102d2b; --panel2: #1b4332; --mint: #2dd4a8; --lime: #73ffb8; --text: #f5fffb; --muted: #9db8b4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 72% 10%, rgba(115,255,184,.2), transparent 24rem), linear-gradient(135deg, #07131f, var(--bg)); color: var(--text); font-family: "DM Sans", sans-serif; overflow: hidden; }
+    .page { height: 100vh; padding: 34px 54px 42px; display: grid; grid-template-rows: auto 1fr auto; gap: 22px; }
+    nav { display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    .logo { width: 38px; height: 38px; background: conic-gradient(from 45deg, var(--mint), var(--lime), var(--mint)); clip-path: polygon(50% 0,62% 35%,100% 35%,70% 56%,82% 100%,50% 72%,18% 100%,30% 56%,0 35%,38% 35%); }
+    .links { display: flex; gap: 36px; color: #cfe8e4; }
+    .actions { display: flex; gap: 22px; align-items: center; }
+    .button { background: linear-gradient(135deg, var(--lime), var(--mint)); color: #062015; padding: 16px 26px; border-radius: 10px; box-shadow: 0 18px 40px rgba(45,212,168,.28); }
+    .grid { display: grid; grid-template-columns: 1.05fr .9fr .48fr; grid-template-rows: 1.55fr .65fr; gap: 12px; min-height: 0; }
+    .card { border: 1px solid rgba(115,255,184,.18); background: linear-gradient(145deg, rgba(16,45,43,.86), rgba(6,18,30,.92)); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,.04); overflow: hidden; position: relative; }
+    .hero { padding: 42px 42px; }
+    .eyebrow { display: inline-flex; border: 1px solid rgba(115,255,184,.28); border-radius: 999px; padding: 8px 14px; color: var(--lime); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-family: "Space Grotesk"; font-size: clamp(64px, 5.7vw, 92px); line-height: .92; margin: 24px 0 18px; letter-spacing: 0; max-width: 650px; }
+    h1 span { color: var(--mint); text-shadow: 0 0 32px rgba(45,212,168,.42); }
+    p { color: #bed5d1; font-size: 19px; line-height: 1.48; max-width: 520px; }
+    .hero .buttons { display: flex; align-items: center; gap: 28px; margin-top: 28px; text-transform: uppercase; font-weight: 700; }
+    .ghost { color: #d5eeea; letter-spacing: .12em; font-size: 13px; }
+    .overview { grid-column: 2; grid-row: 1; padding: 26px; display: grid; grid-template-rows: auto 1fr auto; gap: 18px; }
+    .chart { border: 1px solid rgba(115,255,184,.18); border-radius: 12px; min-height: 210px; background: linear-gradient(180deg, rgba(45,212,168,.1), transparent); position: relative; }
+    .chart::before { content: ""; position: absolute; inset: 42px 30px; background: linear-gradient(140deg, transparent 10%, var(--mint) 11% 13%, transparent 14% 24%, var(--lime) 25% 27%, transparent 28% 45%, var(--mint) 46% 48%, transparent 49%); filter: drop-shadow(0 0 16px rgba(45,212,168,.55)); }
+    .rows { display: grid; gap: 10px; }
+    .row { height: 34px; border: 1px solid rgba(115,255,184,.14); border-radius: 8px; background: rgba(8,22,34,.65); display: flex; align-items: center; justify-content: space-between; padding: 0 14px; color: #cbe2de; font-size: 13px; }
+    .side { padding: 24px; display: grid; align-content: space-between; }
+    .cube { width: 150px; height: 150px; margin: 8px auto; background: linear-gradient(135deg, rgba(115,255,184,.95), rgba(45,212,168,.25)); clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%); box-shadow: 0 0 50px rgba(45,212,168,.35); }
+    .mini { padding: 28px; }
+    .mini h3, .overview h3, .side h3 { margin: 0 0 18px; font-family: "Space Grotesk"; font-size: 22px; }
+    .bars { height: 142px; display: flex; align-items: end; gap: 8px; }
+    .bars span { flex: 1; background: linear-gradient(var(--lime), rgba(45,212,168,.15)); border-radius: 5px 5px 0 0; min-height: 22px; }
+    .footer { height: 58px; border: 1px solid rgba(115,255,184,.18); border-radius: 14px; display: flex; align-items: center; justify-content: space-around; color: #d8f5ef; background: rgba(6,18,30,.72); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav><div class="logo"></div><div class="links"><span>Product</span><span>Solutions</span><span>Pricing</span><span>Docs</span></div><div class="actions"><span>Sign in</span><span class="button">Start free -></span></div></nav>
+    <section class="grid">
+      <div class="card hero"><div class="eyebrow">Built for developers</div><h1>Ship faster.<br>Stay in <span>flow.</span></h1><p>A modern platform to build, test, and ship with clarity. Everything you need, nothing in your way.</p><div class="buttons"><span class="button">Start for free -></span><span class="ghost">View demo</span></div></div>
+      <div class="card overview"><h3>Overview <span style="color:var(--mint);font-size:13px">Live</span></h3><div class="chart"></div><div class="rows"><div class="row"><span>api caching layer</span><span>2m ago</span></div><div class="row"><span>edge parser</span><span>15m ago</span></div></div></div>
+      <div class="card side"><h3>Smart CI</h3><div class="cube"></div><p>Auto-detect. Auto-scale. Optimized for your codebase.</p></div>
+      <div class="card mini"><h3>Workflow</h3><div class="rows"><div class="row"><span>Push</span><span>Test</span></div><div class="row"><span>Build</span><span>Deploy</span></div></div></div>
+      <div class="card mini"><h3>Insights</h3><div class="bars"><span style="height:70%"></span><span style="height:42%"></span><span style="height:88%"></span><span style="height:58%"></span><span style="height:96%"></span><span style="height:64%"></span><span style="height:76%"></span></div></div>
+    </section>
+    <div class="footer"><span>Everything in one place</span><span>Built for speed</span><span>Designed for scale</span><span>Loved by teams</span></div>
+  </main>
+</body>
+</html>

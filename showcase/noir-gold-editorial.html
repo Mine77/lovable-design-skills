@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noir & Gold Editorial</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;600;700&display=swap");
+    :root {
+      --bg: #0d0d0d;
+      --panel: #171717;
+      --ink: #f4efe4;
+      --muted: #a69d8c;
+      --gold: #c9a84c;
+      --soft: #f0d78c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 68% 24%, rgba(201,168,76,.18), transparent 24rem),
+        linear-gradient(115deg, #090909 0%, #121212 62%, #050505 100%);
+      font-family: Karla, sans-serif;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .2;
+      background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .page { width: 100vw; height: 100vh; padding: 42px 58px; position: relative; }
+    nav { display: flex; align-items: center; justify-content: space-between; letter-spacing: .28em; text-transform: uppercase; font-size: 12px; color: var(--muted); }
+    .mark { width: 48px; height: 48px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--soft); letter-spacing: 0; font-family: "Cormorant Garamond"; font-size: 26px; }
+    .links { display: flex; gap: 46px; }
+    .menu { display: flex; align-items: center; gap: 16px; color: var(--soft); }
+    .hamburger { width: 32px; display: grid; gap: 6px; }
+    .hamburger span { height: 2px; background: var(--gold); }
+    .hero { display: grid; grid-template-columns: 1.05fr .95fr .52fr; gap: 0; height: calc(100vh - 120px); align-items: end; }
+    .copy { align-self: center; z-index: 2; padding-bottom: 36px; }
+    .kicker { color: var(--gold); letter-spacing: .32em; font-size: 13px; margin-bottom: 20px; text-transform: uppercase; }
+    h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(92px, 10vw, 172px); line-height: .78; font-weight: 600; margin: 0; max-width: 720px; letter-spacing: 0; }
+    h1 span { color: var(--gold); }
+    .desc { margin-top: 34px; width: 270px; color: #d5cec0; line-height: 1.7; letter-spacing: .16em; text-transform: uppercase; font-size: 12px; }
+    .cta { margin-top: 42px; display: inline-flex; align-items: center; gap: 24px; color: var(--soft); letter-spacing: .22em; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 10px; }
+    .portrait { align-self: stretch; margin-top: 70px; position: relative; background: linear-gradient(160deg, #101010 12%, #272018 52%, #050505 100%); overflow: hidden; }
+    .portrait::before { content: ""; position: absolute; width: 410px; height: 410px; border-radius: 50%; right: 12%; top: 14%; background: radial-gradient(circle at 38% 30%, #f0d78c 0 3%, #8d6a20 4% 18%, #201913 19% 48%, transparent 49%); box-shadow: -80px 110px 0 -20px rgba(0,0,0,.7); filter: blur(.2px); }
+    .portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,13,13,.4), transparent 35%, rgba(13,13,13,.7)); }
+    .side { display: grid; grid-template-rows: 1fr 1fr; align-self: stretch; margin-top: 160px; }
+    .tile { border: 1px solid rgba(201,168,76,.25); background: rgba(20,20,20,.72); padding: 30px; position: relative; overflow: hidden; }
+    .tile.gold { background: linear-gradient(135deg, #b58d2f, #f0d78c 48%, #7f651d); color: #0d0d0d; display: flex; align-items: end; justify-content: center; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .arch { width: 120px; height: 150px; border-radius: 70px 70px 0 0; background: linear-gradient(#3a372f, #080808); margin: 24px auto 30px; box-shadow: inset 0 0 0 18px #111; }
+    .label { color: var(--gold); letter-spacing: .22em; text-transform: uppercase; font-size: 12px; }
+    .quote { position: absolute; bottom: 36px; left: 42%; color: var(--soft); letter-spacing: .22em; text-transform: uppercase; font-size: 12px; line-height: 2; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav><div class="mark">I</div><div class="links"><span>Stories</span><span>Collection</span><span>Journal</span><span>About</span></div><div class="menu">Menu <div class="hamburger"><span></span><span></span><span></span></div></div></nav>
+    <section class="hero">
+      <div class="copy">
+        <div class="kicker">Issue 01</div>
+        <h1><span>Obscure</span><br>Beauty</h1>
+        <p class="desc">A study of light, texture, and form in their rarest state.</p>
+        <div class="cta">Explore stories <span>-></span></div>
+      </div>
+      <div class="portrait"></div>
+      <aside class="side">
+        <div class="tile"><div class="label">01 / 03</div><div class="arch"></div><div class="label">Architecture</div></div>
+        <div class="tile gold">View collection -></div>
+      </aside>
+    </section>
+    <div class="quote">What remains<br>when everything<br>extra is removed.</div>
+  </main>
+</body>
+</html>

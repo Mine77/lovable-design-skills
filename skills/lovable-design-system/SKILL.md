@@ -1,15 +1,22 @@
 ---
 name: lovable-design-system
-description: Distinctive, production-grade frontend design with bold aesthetic direction, curated palette/typography/layout presets, and a structured design-direction flow. Use whenever building or refining UI (landing pages, product surfaces, marketing sites, dashboards) — especially when the brief is visual, broad, or "make it look good". Rejects generic AI aesthetics (Inter + purple gradients + centered cards). Stack assumption: React + Vite + TypeScript + Tailwind v3 + shadcn/ui, but the philosophy is stack-agnostic.
+description: >-
+  Distinctive, production-grade frontend design with bold aesthetic direction,
+  curated palette/typography/layout presets, generated visual previews when
+  supported, persistent styleguide.md guidance, and a structured
+  design-direction flow. Use whenever building or refining UI, especially when
+  the brief is visual, broad, or "make it look good". Rejects generic AI
+  aesthetics such as Inter + purple gradients + centered cards.
 ---
 
 # Lovable Design System
 
 This skill captures the full design context the Lovable agent operates under:
 the **philosophy** (what good UI must avoid and aspire to), the **curated
-visual asset library** (palettes, font pairs, layouts), and the **interaction
+visual asset library** (palettes, font pairs, layouts), the **interaction
 flows** for gathering design direction from a user (visual_choice questions,
-rendered design directions).
+rendered design directions), and the local `styleguide.md` contract that
+keeps aesthetic choices stable across future work.
 
 It is a 1:1 transcription of the system-level guidance — no project-specific
 content. Drop it into any agent (Codex, Cursor, Claude Code, Lovable, etc.)
@@ -52,6 +59,22 @@ could pass for any other AI-generated SaaS landing page, start over.
 
 Match complexity to vision: maximalist designs need extensive effects;
 minimalist designs need precision in spacing and typography.
+
+### Project styleguide contract
+
+Before starting visual work, check the project root for `styleguide.md`.
+
+- If `styleguide.md` exists, read it first and treat it as the current
+  aesthetic contract. Follow its palette, typography, layout, motion, radius,
+  and component guidance unless the user explicitly asks to change direction.
+- If the user picks visual choices during this skill's flow, create or update
+  `styleguide.md` in the project root when the local environment allows file
+  writes. See `references/styleguide-persistence.md`.
+- If file writes are unavailable, present the styleguide content inline so the
+  user can save it manually.
+- Do not overwrite unrelated brand guidelines. If a project already has
+  `styleguide.md`, merge the new choices into a dated "Current UI direction"
+  section instead of deleting existing context.
 
 ### Design system implementation (Tailwind/CSS variables stack)
 
@@ -105,6 +128,9 @@ the canonical menu — don't invent new presets unless none fit.
   vibe each communicates.
 - `references/layout-archetypes.md` — 15 layout wireframe archetypes with
   the project types they suit.
+- `references/styleguide-persistence.md` — how to persist the user's chosen
+  palette, typography, layout, tokens, and implementation rules into
+  `styleguide.md`.
 
 ---
 
@@ -115,7 +141,8 @@ build. Pull direction from them in a structured way.
 
 - `references/ask-questions-flow.md` — when to ask design preference
   questions, how to structure the three visual_choice questions (palette,
-  typography, layout), and the never-ask rules.
+  typography, layout), how to generate visual previews when supported, and
+  the never-ask rules.
 - `references/design-directions-flow.md` — the two-act "redesign ritual":
   pin the taste with visual_choice questions, then generate three rendered
   directions that vary in composition while keeping palette/type/layout
@@ -141,23 +168,26 @@ build. Pull direction from them in a structured way.
 ## 5. Decision procedure — the loop
 
 1. Read the user's request. Is it visual? Is the direction explicit?
-2. If direction is given ("minimal black & white Swiss typography"), build.
-3. If direction is missing AND the surface is design-open (landing, portfolio,
+2. Check for `styleguide.md`; if present, use it as the default visual
+   direction.
+3. If direction is given ("minimal black & white Swiss typography"), build.
+4. If direction is missing AND the surface is design-open (landing, portfolio,
    marketing, brand site), ask the **three visual_choice questions**
    (palette / typography / layout) from `references/ask-questions-flow.md`.
-4. Skip the questions for purely functional requests (todo app, calculator,
+5. Skip the questions for purely functional requests (todo app, calculator,
    CRUD admin), for obvious-default surfaces (dashboards, admin panels), or
    when the user has already given explicit direction.
-5. For *refinement* of existing UI ("make it more elegant", "add wow"),
+6. For *refinement* of existing UI ("make it more elegant", "add wow"),
    use the design-directions flow in
    `references/design-directions-flow.md` instead of the questions flow.
-6. Translate the user's picks into a detailed creative brief: specific
+7. Translate the user's picks into a detailed creative brief: specific
    fonts, hex colors, animation approaches, layout decisions. Infer
    whitespace, border radius, animation intensity, and visual weight from
    the palette + typography combo.
-7. Build. Use design tokens. Avoid the banned defaults. Match complexity
+8. Persist those picks into `styleguide.md` when possible.
+9. Build. Use design tokens. Avoid the banned defaults. Match complexity
    to the chosen tone.
-8. After meaningful milestones, do a visual QA pass: screenshot, check
+10. After meaningful milestones, do a visual QA pass: screenshot, check
    contrast, check that the page does NOT look like generic AI output.
 
 ---
@@ -171,6 +201,9 @@ build. Pull direction from them in a structured way.
 - Pair a distinctive display font with a refined body font.
 - Pick presets from the curated palette / font / layout library.
 - Ask the three visual_choice questions when direction is missing.
+- Generate visual previews for the choices when the runtime supports image
+  generation.
+- Persist selected visual direction into `styleguide.md`.
 - Match implementation complexity to the chosen tone.
 
 **Don't**

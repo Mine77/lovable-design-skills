@@ -98,6 +98,9 @@ Implement the chosen direction with composition matched exactly:
 - Same density.
 - Copy the chosen direction's design tokens verbatim into the project's
   CSS — don't re-derive values.
+- Persist the chosen palette, typography, layout, motion register, and
+  component treatment into `styleguide.md` when possible. Follow
+  `styleguide-persistence.md`.
 
 The prototype is structural reference, not just a mood board. If the user
 later asks to see the same pending directions again, present them again

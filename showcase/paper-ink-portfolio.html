@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper & Ink Portfolio</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap");
+    :root { --paper: #f5f3ee; --line: #d6d0c7; --ink: #0d0d0d; --soft: #e8e4dd; --muted: #706a62; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: var(--ink); background: radial-gradient(circle at 20% 10%, #fff, transparent 24rem), var(--paper); font-family: "Work Sans", sans-serif; overflow: hidden; }
+    body::before { content: ""; position: fixed; inset: 0; opacity: .26; background-image: radial-gradient(#151515 0.5px, transparent .5px); background-size: 5px 5px; pointer-events: none; }
+    .page { height: 100vh; padding: 30px 58px; display: grid; grid-template-rows: auto 1fr; gap: 24px; }
+    nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 18px; font-size: 13px; }
+    .brand { letter-spacing: .28em; text-transform: uppercase; font-weight: 600; }
+    .links { display: flex; gap: 46px; }
+    .info { justify-self: end; }
+    .main { display: grid; grid-template-columns: .9fr 1.35fr .36fr; grid-template-rows: 1.08fr .82fr; border-left: 1px solid var(--line); border-top: 1px solid var(--line); }
+    .panel { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; padding: 36px; }
+    .intro { padding: 42px 44px; }
+    h1 { font-family: "Instrument Serif", serif; font-size: clamp(78px, 8vw, 128px); line-height: .86; margin: 0; font-weight: 400; letter-spacing: 0; }
+    .intro-grid { display: grid; grid-template-columns: 180px 1fr; gap: 30px; margin-top: 34px; align-items: end; }
+    .thumb, .photo { background: linear-gradient(135deg, #111, #777 42%, #eee 43%, #cfc9bf); min-height: 126px; }
+    .list { display: grid; gap: 12px; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    .list div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    .feature { padding: 0; display: grid; grid-template-columns: 1fr 180px; }
+    .photo { min-height: 100%; background: linear-gradient(120deg, #111 0 26%, #f0ede7 27% 48%, #9f9b92 49% 70%, #ded8cf 71%); }
+    .caption { padding: 32px 24px; display: grid; align-content: space-between; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; }
+    .caption strong { font-family: "Instrument Serif"; color: var(--ink); font-size: 30px; line-height: 1; font-weight: 400; text-transform: none; letter-spacing: 0; }
+    .vertical { writing-mode: vertical-rl; text-transform: uppercase; letter-spacing: .18em; font-size: 12px; color: var(--muted); display: grid; place-items: center; }
+    .projects { grid-column: 1 / 4; display: grid; grid-template-columns: 220px repeat(5, 1fr); padding: 0; }
+    .project, .archive { border-right: 1px solid var(--line); padding: 28px 22px; }
+    .archive { display: grid; align-content: space-between; color: var(--muted); }
+    .project .img { height: 122px; background: linear-gradient(135deg, #cfc8bd, #f6f3ee 48%, #111 49%, #888); margin-bottom: 18px; }
+    .project:nth-child(3) .img { background: linear-gradient(90deg, #eee, #111 46%, #555 47%, #f5f3ee); }
+    .project:nth-child(4) .img { background: radial-gradient(circle at 50% 52%, #444 0 26%, transparent 27%), #111; }
+    .project:nth-child(5) .img { background: radial-gradient(circle at 65% 40%, #111 0 10%, transparent 11%), linear-gradient(135deg, #f8f5ef, #aaa); }
+    .project:nth-child(6) .img { background: linear-gradient(90deg, #111 0 2%, #ece7dd 3% 100%); }
+    .num { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+    .name { font-family: "Instrument Serif"; font-size: 22px; }
+    .type { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav><div class="brand">Paper & Ink</div><div class="links"><span>Work</span><span>Studio</span><span>Approach</span><span>Journal</span></div><div class="info">Info</div></nav>
+    <section class="main">
+      <div class="panel intro"><h1>Ideas<br>in Form.</h1><div class="intro-grid"><div class="thumb"></div><div class="list"><div><span>Identity</span><span>-></span></div><div><span>Digital</span><span>-></span></div><div><span>Print</span><span>-></span></div></div></div></div>
+      <div class="panel feature"><div class="photo"></div><div class="caption"><span>01</span><strong>A Study<br>in Balance</strong><span>Featured project -></span></div></div>
+      <div class="panel vertical">Featured project</div>
+      <div class="panel projects">
+        <div class="archive"><span>02 Projects</span><span>View all -></span></div>
+        <div class="project"><div class="img"></div><div class="num">02</div><div class="name">Monograph</div><div class="type">Identity</div></div>
+        <div class="project"><div class="img"></div><div class="num">03</div><div class="name">Sunday</div><div class="type">Digital</div></div>
+        <div class="project"><div class="img"></div><div class="num">04</div><div class="name">Structures</div><div class="type">Print</div></div>
+        <div class="project"><div class="img"></div><div class="num">05</div><div class="name">Glean</div><div class="type">Identity</div></div>
+        <div class="project"><div class="img"></div><div class="num">06</div><div class="name">Archive</div><div class="type">Experiments</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
