@@ -1,6 +1,13 @@
+
 ---
 name: lovable-design-system
-description: Distinctive, production-grade frontend design with bold aesthetic direction, curated palette/typography/layout presets, and a structured design-direction flow. Use whenever building or refining UI (landing pages, product surfaces, marketing sites, dashboards) — especially when the brief is visual, broad, or "make it look good". Rejects generic AI aesthetics (Inter + purple gradients + centered cards). Stack assumption: React + Vite + TypeScript + Tailwind v3 + shadcn/ui, but the philosophy is stack-agnostic.
+description: >
+  Distinctive, production-grade frontend design with bold aesthetic direction,
+  curated palette, typography, layout presets, and a structured design-direction
+  flow. Use when building or refining landing pages, product interfaces,
+  marketing websites, and dashboards. Especially useful for visual design
+  briefs. Avoid generic AI aesthetics. Assumes React, Vite, TypeScript,
+  Tailwind CSS v3, and shadcn/ui, but the design philosophy is stack-agnostic.
 ---
 
 # Lovable Design System
